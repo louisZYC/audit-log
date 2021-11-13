@@ -5,9 +5,9 @@ services:
         container_name: mysql-server
         ports:
             - "13306:3306"
-	    volumes:
-            - ./var/lib/mysql:/var/lib/mysql
+        volumes:
             - ./etc/my.cnf:/etc/my.cnf
+            - ./var/lib/mysql:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: 12345
             MYSQL_DATABASE: wordpress
