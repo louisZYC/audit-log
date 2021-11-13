@@ -5,7 +5,7 @@ services:
         container_name: mysql-server
         ports:
             - "13306:3306"
-	volumes:
+	    volumes:
             - ./var/lib/mysql:/var/lib/mysql
             - ./etc/my.cnf:/etc/my.cnf
         environment:
