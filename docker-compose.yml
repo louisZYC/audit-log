@@ -11,7 +11,7 @@ services:
             MYSQL_ROOT_PASSWORD: 12345
             MYSQL_DATABASE: wordpress
             MYSQL_USER: wordpress_user
-            MYSQL_PASSWORD: secret
+            MYSQL_PASSWORD: 12345
         image: percona:5.7
     wordpress:
         image: wordpress:latest
@@ -21,6 +21,6 @@ services:
         environment:
             WORDPRESS_DB_HOST: percona:3306
             WORDPRESS_DB_USER: wordpress_user
-            WORDPRESS_DB_PASSWORD: secret
+            WORDPRESS_DB_PASSWORD: 12345
         depends_on:
             - percona
