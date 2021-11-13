@@ -1,8 +1,8 @@
 version: '3.2'
 
 services:
-    mysql-server:
-        container_name: mysql-server
+    percona:
+        container_name: percona
         ports:
             - "13306:3306"
         volumes:
@@ -20,7 +20,7 @@ services:
         ports:
             - "80:80"
         environment:
-            WORDPRESS_DB_HOST: mysql-server:3306
+            WORDPRESS_DB_HOST: percona:3306
             WORDPRESS_DB_USER: wordpress_user
             WORDPRESS_DB_PASSWORD: secret
         depends_on:
