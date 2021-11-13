@@ -24,4 +24,4 @@ services:
             WORDPRESS_DB_USER: wordpress_user
             WORDPRESS_DB_PASSWORD: secret
         depends_on:
-            - mysql-server
+            - percona
